@@ -1,30 +1,25 @@
-Bounty-Web-Expenses
-===================
 
-Tracking expenses accurately can be the biggest headache among a group of roommates or co-workers. There are many apps which do this kind of task.
+This app uses  ember.js version 1.1.2 and ember-data 1.0.
+A couple of points:
+1. Enter "For Whom" values in expenses seperated by space
+2. The entry assumes payee is included in the expense.
+   Eg if A pays when A,B and C are involved, no need to enter A in the whom field.
 
-Your task is to build a similar webapp using a client side Javascript MVC framework.
 
-**Snaps for Reference - Basic Functionalities Required**
 
-Add New Member
-
-![Add New Member](http://artoogithubdocs.s3.amazonaws.com/bounty/add-new-member.png)
-
-Add New Expense
-
-![Add New Expense](http://artoogithubdocs.s3.amazonaws.com/bounty/add-expense.png)
-
-Summary Sheet
-
-![Summary Sheet](http://artoogithubdocs.s3.amazonaws.com/bounty/summary.png) 
-
-**Brownie Points**
-
-1.  Data Visualization - Charts and graphs to show division of expenses
-2.  Options like Print, Export to xls etc 
-3.  Server Side Synchronization
-
-**Technologies we love**
-
-Ember.js, Backbone.js, D3.js, Node.js, Phantom.js, CouchDB
+TBD
+1. Validations:
+   a)Expenses should only be entered for users in the group
+   b)A user should not be deleted unless all accounts are settled
+2. Filter records 
+    Getting all the expenses that a particular user is unvolved in.
+3. Provide ckeck box input for choosing users.
+   Only space seperated entry is possible right now.
+4. Non even split of expenses
+5. Support 'All' entry in expenses.
+6. Synchronizing editing of expenses with payments.
+   Currently, editing expenses has no impact on payments.   
+7. Support a practical payment resolution method.
+   The system should not recommend a particular resolution plan.
+   If set X is creditors and set Y is debtors, any mapping of payments from Y to X should be possible.
+   Current application only shows final total payments.
